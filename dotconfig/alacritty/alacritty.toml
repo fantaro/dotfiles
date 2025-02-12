@@ -1,0 +1,15 @@
+[window]
+dimensions = { columns = 120, lines = 32 }
+padding = { x = 4, y = 4 }
+opacity = 0.9
+
+[font]
+normal = { family = "Hack Nerd Font Mono", style = "Regular" }
+bold = { family = "Hack Nerd Font Mono", style = "Bold" }
+italic = { family = "Hack Nerd Font Mono", style = "Italic" }
+bold_italic = { family = "Hack Nerd Font Mono", style = "Bold Italic" }
+size = 12.0
+offset = { x = 0, y = 1 }
+
+[selection]
+save_to_clipboard = true
