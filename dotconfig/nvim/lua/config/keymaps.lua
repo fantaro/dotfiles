@@ -11,8 +11,6 @@ map("n", "<F2>", "<cmd>tabnew<cr>", { silent = true })
 
 -- F4: Interactive search/replace
 map("n", "<F4>", ":%s///gc<Left><Left><Left><Left>")
-
--- F4: Replace in selected area
 map("v", "<F4>", ":s///gc<Left><Left><Left><Left>")
 
 -- F6: Reload file with different encoding (fix file encoding issues)
