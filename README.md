@@ -1,7 +1,7 @@
 # My dotfiles
-### 文件路径
 - ~/.aria2/aria2.conf
 - ~/.config/alacritty
+- ~/.config/eza
 - ~/.config/ghostty
 - ~/.config/neovide
 - ~/.config/nvim
