@@ -13,6 +13,13 @@
 test -s ~/.alias && . ~/.alias || true
 . "$HOME/.cargo/env"
 
+# alias
+alias ls='lsd'
+alias ll='lsd -l'
+alias la='lsd -a'
+alias lla='lsd -la'
+alias lt='lsd --tree'
+
 export SUDO_EDITOR=/usr/bin/nvim
 
 if command -v starship &> /dev/null; then
