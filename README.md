@@ -3,6 +3,7 @@
 - ~/.config/alacritty
 - ~/.config/eza
 - ~/.config/ghostty
+- ~/.config/lsd
 - ~/.config/neovide
 - ~/.config/nvim
 - ~/.config/starship.toml
