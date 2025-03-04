@@ -9,7 +9,7 @@
 "       vim               vim       vim   vim   vim
 "       vim            vimvimvim    vim   vim   vim
 
-" Last Change : 2025-02-27
+" Last Change : 2025-03-04
 "  Maintainer : 樊 振剛（ハン シンゴウ）
 "        Mail : fantaro@gmail.com
 "      Github : https://github.com/fantaro
@@ -69,6 +69,7 @@ silent! call plug#begin($VIM . '/vimfiles/plugged')
   Plug 'catppuccin/vim', { 'as': 'catppuccin' }
   Plug 'ryanoasis/vim-devicons'
   Plug 'mg979/vim-visual-multi'
+  Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug'] }
 silent! call plug#end()
 
 "---------------------------------------------------------------------------
@@ -332,17 +333,17 @@ if filereadable($VIM . '/vimfiles/plugged/lightline.vim/plugin/lightline.vim')
   let g:lightline = {
       \ 'colorscheme': 'catppuccin_macchiato',
       \ }
-    if filereadable($VIM . '/vimfiles/plugged/vim-devicons/plugin/webdevicons.vim')
-      let g:lightline.component = {
-        \ 'fileformat': '%{&ff. " " . WebDevIconsGetFileFormatSymbol()}',
-        \ 'filetype': '%{&ft!=#""?&ft . " " . WebDevIconsGetFileTypeSymbol():"no ft"}',
-        \ 'lineinfo': '[%3l/%3L]:%-2c'
-        \ }
-    else
-      let g:lightline.component = {
-        \ 'lineinfo': '[%3l/%3L]:%-2c'
-        \ }
-    endif
+  if filereadable($VIM . '/vimfiles/plugged/vim-devicons/plugin/webdevicons.vim')
+    let g:lightline.component = {
+      \ 'fileformat': '%{&ff. " " . WebDevIconsGetFileFormatSymbol()}',
+      \ 'filetype': '%{&ft!=#""?&ft . " " . WebDevIconsGetFileTypeSymbol():"no ft"}',
+      \ 'lineinfo': '[%3l/%3L]:%-2c'
+      \ }
+  else
+    let g:lightline.component = {
+      \ 'lineinfo': '[%3l/%3L]:%-2c'
+      \ }
+  endif
 endif
 
 " mruの設定
