@@ -2,6 +2,7 @@
 - ~/.aria2/aria2.conf
 - ~/.config/alacritty
 - ~/.config/eza
+- ~/.config/fastfetch
 - ~/.config/ghostty
 - ~/.config/lsd
 - ~/.config/neovide
