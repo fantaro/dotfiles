@@ -13,13 +13,35 @@
 test -s ~/.alias && . ~/.alias || true
 . "$HOME/.cargo/env"
 
-# alias
+# alias for lsd
 alias ls='lsd'
 alias ll='lsd -l'
 alias la='lsd -a'
 alias lla='lsd -la'
 alias lt='lsd --tree'
 
+# alias for diff
+alias diff="diff --color=auto"
+alias vdiff="nvim -d"
+
+# alias for git
+alias gs="git status"
+alias gsh="git show"
+alias gb="git branch"
+alias gck="git checkout"
+alias gcm="git checkout master"
+alias ga="git add"
+alias gac="git add . && git commit -m update"
+alias gd="git diff"
+alias gds="git diff --staged"
+alias gdw="git diff --word-diff"
+alias gdws="git diff --word-diff --staged"
+alias gl="git log --graph --all --abbrev-commit"
+alias gll="git log --graph --all"
+alias gln="git log --graph --abbrev-commit --name-only"
+alias glf="git log --follow -p"
+
+export EDITOR=/usr/bin/nvim
 export SUDO_EDITOR=/usr/bin/nvim
 
 if command -v starship &> /dev/null; then
