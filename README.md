@@ -1,6 +1,7 @@
 # My dotfiles
 - ~/.aria2/aria2.conf
 - ~/.config/alacritty
+- ~/.config/btop
 - ~/.config/eza
 - ~/.config/fastfetch
 - ~/.config/ghostty

@@ -19,6 +19,7 @@ alias ll='lsd -l'
 alias la='lsd -a'
 alias lla='lsd -la'
 alias lt='lsd --tree'
+alias lta='lsd -a --tree'
 
 # alias for diff
 alias diff="diff --color=auto"
