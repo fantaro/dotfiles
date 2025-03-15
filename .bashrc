@@ -42,6 +42,7 @@ alias gll="git log --graph --all"
 alias gln="git log --graph --abbrev-commit --name-only"
 alias glf="git log --follow -p"
 
+alias vim=nvim
 export EDITOR=/usr/bin/nvim
 export SUDO_EDITOR=/usr/bin/nvim
 
@@ -49,3 +50,5 @@ if command -v starship &> /dev/null; then
   eval "$(starship completions bash)"
   eval "$(starship init bash)"
 fi
+
+fastfetch --config ~/.config/fastfetch/config-compact.jsonc

@@ -3,10 +3,10 @@ deps = []
 
 [[flavor.deps]]
 use = "Chromium-3-Oxide/everforest-medium"
-rev = "65bc09b"
-hash = "2bc39a2ccc968ba4d50ea060e0722967"
+rev = "3d5f847"
+hash = "9b4190e2447f2c843fee23ea5f068f6"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "fd85060"
-hash = "c40e434318a8ceffd01842f8dfb2390e"
+rev = "b929df6"
+hash = "2ac87e1b3a61f5887472899e86535d29"
