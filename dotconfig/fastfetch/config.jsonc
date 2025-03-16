@@ -9,18 +9,18 @@
 		"separator": "   "
     },
     "modules": [
-         {
+        {
             "type": "title",
             "key": "    ",
             "keyColor": "34",
         },
-         {
+        {
             "type": "uptime",
             "key": "    ",
             "keyColor": "36",
         },
         "separator",
-         {
+        {
             "type": "os",
             "key": "OS   ",
             "keyColor": "31",
@@ -93,7 +93,7 @@
             "key": "PC   ",
             "keyColor": "33",
         },
-         {
+        {
             "type": "host",
             "format": "{2}",
             "key": " ├ 󰇅 ",

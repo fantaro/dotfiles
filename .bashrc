@@ -18,7 +18,7 @@ if command -v starship &> /dev/null; then
   eval "$(starship init bash)"
 fi
 
-fastfetch --config ~/.config/fastfetch/config-compact.jsonc
+date | cowsay -rC
 
 export EDITOR=/usr/bin/nvim
 export SUDO_EDITOR=/usr/bin/nvim
