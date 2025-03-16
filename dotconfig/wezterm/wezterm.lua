@@ -17,8 +17,10 @@ config.font_size = 14
 config.hide_tab_bar_if_only_one_tab = true
 config.initial_cols = 120
 config.initial_rows = 36
+config.switch_to_last_active_tab_when_closing_tab = true
 config.use_ime = true
 config.window_background_opacity = 0.9
+config.window_decorations = "NONE"
 
 -- Return the configuration to wezterm
 return config
