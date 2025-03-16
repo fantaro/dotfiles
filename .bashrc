@@ -18,7 +18,7 @@ if command -v starship &> /dev/null; then
   eval "$(starship init bash)"
 fi
 
-date | cowsay -rC
+date '+%Y/%m/%d %a %H:%M:%S' | cowsay -rC
 
 export EDITOR=/usr/bin/nvim
 export SUDO_EDITOR=/usr/bin/nvim
