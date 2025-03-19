@@ -1,12 +1,9 @@
-[plugin]
-deps = []
-
-[[flavor.deps]]
-use = "Chromium-3-Oxide/everforest-medium"
-rev = "3d5f847"
-hash = "9b4190e2447f2c843fee23ea5f068f6"
+[[plugin.deps]]
+use = "AnirudhG07/rich-preview"
+rev = "2559e5f"
+hash = "c9a3d0731e7d7340e2c6d6126b1f3aa3"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "b929df6"
+rev = "68326b4"
 hash = "2ac87e1b3a61f5887472899e86535d29"
