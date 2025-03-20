@@ -14,3 +14,4 @@
 - ~/.bashrc
 - ~/.tmux.conf
 - ~/.vimrc
+- ~/.zshrc
