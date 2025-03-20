@@ -75,6 +75,7 @@ plugins=(
 	zsh-autosuggestions
 	fzf
 	tmux
+	colored-man-pages
 )
 export FZF_BASE=/usr/bin/fzf
 
