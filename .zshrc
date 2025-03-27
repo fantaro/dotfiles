@@ -76,6 +76,7 @@ plugins=(
 	fzf
 	tmux
 	colored-man-pages
+	zsh-syntax-highlighting
 )
 export FZF_BASE=/usr/bin/fzf
 
