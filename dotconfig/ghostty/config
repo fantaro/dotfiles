@@ -55,9 +55,9 @@ keybind = ctrl+shift+%=new_split:right
 
 # My config
 # ==========================
-shell-integration = bash
-font-family = Hack Nerd Font Mono
-font-size = 12
+shell-integration = zsh
+font-family = Maple Mono NF CN
+font-size = 13
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 2
 theme = catppuccin-mocha

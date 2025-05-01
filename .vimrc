@@ -392,12 +392,9 @@ if has('gui_running')
 
   " フォントの設定
   " Windowsフォント
-  "set guifont=Maple_Mono_NF_CN_Medium:h12:cDEFAULT
+  set guifont=Maple_Mono_NF_CN_Medium:h12:cDEFAULT
   " Linuxフォント
-  "set guifont=DejaVu\ Sans\ Mono\ 11
-  "set guifont=JetBrainsMono\ Nerd\ Font\ Mono\ 11
-  "set guifont=SauceCodePro\ Nerd\ Font\ Mono\ 11
-  set guifont=Hack\ Nerd\ Font\ Mono\ 12
+  "set guifont=Maple\ Mono\ NF\ CN\ Medium\ 12
 
   " ウインドウの幅
   set columns=150
