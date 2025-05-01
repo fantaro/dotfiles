@@ -44,22 +44,22 @@
 
 # My keybinds
 # ==========================
-keybind = ctrl+up=increase_font_size:1
-keybind = ctrl+down=decrease_font_size:1
+keybind = ctrl+shift+"=new_split:right
+keybind = ctrl+shift+%=new_split:down
 keybind = ctrl+shift+up=resize_split:up,10
 keybind = ctrl+shift+down=resize_split:down,10
 keybind = ctrl+shift+left=resize_split:left,10
 keybind = ctrl+shift+right=resize_split:right,10
-keybind = ctrl+shift+"=new_split:down
-keybind = ctrl+shift+%=new_split:right
+keybind = ctrl+up=increase_font_size:1
+keybind = ctrl+down=decrease_font_size:1
 
 # My config
 # ==========================
-shell-integration = zsh
+background-opacity = 0.9
 font-family = Maple Mono NF CN
 font-size = 13
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 2
+shell-integration = zsh
 theme = catppuccin-mocha
-background-opacity = 0.9
 unfocused-split-opacity = 0.8
