@@ -9,7 +9,7 @@
 "       vim               vim       vim   vim   vim
 "       vim            vimvimvim    vim   vim   vim
 
-" Last Change : 2025-03-10
+" Last Change : 2025-05-01
 "  Maintainer : 樊 振剛（ハン シンゴウ）
 "        Mail : fantaro@gmail.com
 "      Github : https://github.com/fantaro
@@ -392,11 +392,7 @@ if has('gui_running')
 
   " フォントの設定
   " Windowsフォント
-  "set guifont=UDEV_Gothic_NF:h12:cDEFAULT
-  "set guifont=JetBrainsMono_NFM:h11:cDEFAULT
-  "set guifont=Cascadia\ Code:h11:cDEFAULT
-  "set guifont=Consolas:h12:cDEFAULT
-  "set guifont=MS_Gothic:h14:cDEFAULT
+  "set guifont=Maple_Mono_NF_CN_Medium:h12:cDEFAULT
   " Linuxフォント
   "set guifont=DejaVu\ Sans\ Mono\ 11
   "set guifont=JetBrainsMono\ Nerd\ Font\ Mono\ 11
