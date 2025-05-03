@@ -71,11 +71,11 @@ ZSH_THEME="ys"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	git
-	zsh-autosuggestions
-	fzf
-	tmux
 	colored-man-pages
+	fzf
+	git
+	tmux
+	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
 export FZF_BASE=/usr/bin/fzf
@@ -86,7 +86,7 @@ source $ZSH/oh-my-zsh.sh
 test -s ~/.alias && . ~/.alias || true
 . "$HOME/.cargo/env"
 
-date '+%Y/%m/%d %a %H:%M:%S' | cowsay -rC
+pokemon-colorscripts -r
 
 export EDITOR=/usr/bin/nvim
 export SUDO_EDITOR=/usr/bin/nvim
