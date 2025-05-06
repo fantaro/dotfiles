@@ -18,7 +18,7 @@ if command -v starship &> /dev/null; then
   eval "$(starship init bash)"
 fi
 
-pokego --random 1-8
+pokemon-colorscripts --random
 
 export EDITOR=/usr/bin/nvim
 export SUDO_EDITOR=/usr/bin/nvim
