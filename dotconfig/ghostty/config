@@ -63,3 +63,4 @@ mouse-scroll-multiplier = 2
 shell-integration = zsh
 theme = catppuccin-mocha
 unfocused-split-opacity = 0.8
+window-decoration = none
