@@ -86,7 +86,7 @@ source $ZSH/oh-my-zsh.sh
 test -s ~/.alias && . ~/.alias || true
 . "$HOME/.cargo/env"
 
-pokemon-colorscripts -r
+pokego --random 1-8
 
 export EDITOR=/usr/bin/nvim
 export SUDO_EDITOR=/usr/bin/nvim
