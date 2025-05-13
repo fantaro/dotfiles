@@ -25,11 +25,11 @@ export SUDO_EDITOR=/usr/bin/nvim
 
 # alias for lsd
 alias ls=lsd
-alias ll='lsd -l'
-alias la='lsd -a'
-alias lla='lsd -la'
-alias lt='lsd --tree'
-alias lta='lsd -a --tree'
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+alias lta='ls -a --tree'
 
 # alias for diff
 alias diff='diff --color=auto'
