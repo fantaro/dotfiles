@@ -104,7 +104,7 @@ alias diff='diff --color=auto'
 alias vdiff='nvim -d'
 
 # alias for bat
-alias cat='bat --paging=never'
+alias cat='bat --paging=never --theme=Nord'
 
 # alias for git
 alias gs='git status'
