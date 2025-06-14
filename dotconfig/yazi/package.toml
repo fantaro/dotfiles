@@ -8,6 +8,11 @@ use = "yazi-rs/plugins:diff"
 rev = "aeca767"
 hash = "47865a70cade14a0b9b6bc6a54f16bdb"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:mount"
+rev = "aeca767"
+hash = "277ba273e5d3d647feb5808d0fe4e4e0"
+
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
 rev = "d04a298"

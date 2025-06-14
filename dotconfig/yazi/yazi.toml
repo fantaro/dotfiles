@@ -39,21 +39,21 @@ edit = [
 	{ run = 'code -w %*', block = true,  desc = "code (block)", for = "windows" },
 ]
 open = [
-	{ run = 'xdg-open "$1"',                desc = "Open", for = "linux" },
-	{ run = 'open "$@"',                    desc = "Open", for = "macos" },
+	{ run = 'xdg-open "$1"', desc = "Open", for = "linux" },
+	{ run = 'open "$@"', desc = "Open", for = "macos" },
 	{ run = 'start "" "%1"', orphan = true, desc = "Open", for = "windows" },
-	{ run = 'termux-open "$1"',             desc = "Open", for = "android" },
+	{ run = 'termux-open "$1"', desc = "Open", for = "android" },
 ]
 reveal = [
-	{ run = 'xdg-open "$(dirname "$1")"',           desc = "Reveal", for = "linux" },
-	{ run = 'open -R "$1"',                         desc = "Reveal", for = "macos" },
+	{ run = 'xdg-open "$(dirname "$1")"', desc = "Reveal", for = "linux" },
+	{ run = 'open -R "$1"', desc = "Reveal", for = "macos" },
 	{ run = 'explorer /select,"%1"', orphan = true, desc = "Reveal", for = "windows" },
-	{ run = 'termux-open "$(dirname "$1")"',        desc = "Reveal", for = "android" },
+	{ run = 'termux-open "$(dirname "$1")"', desc = "Reveal", for = "android" },
 	{ run = '''exiftool "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF", for = "unix" },
 ]
 extract = [
 	{ run = 'ya pub extract --list "$@"', desc = "Extract here", for = "unix" },
-	{ run = 'ya pub extract --list %*',   desc = "Extract here", for = "windows" },
+	{ run = 'ya pub extract --list %*', desc = "Extract here", for = "windows" },
 ]
 play = [
 	{ run = 'mpv --force-window "$@"', orphan = true, for = "unix" },
@@ -201,14 +201,14 @@ shell_offset = [ 0, 2, 50, 3 ]
 
 [confirm]
 # trash
-trash_title 	= "Trash {n} selected file{s}?"
-trash_origin	= "center"
-trash_offset	= [ 0, 0, 70, 20 ]
+trash_title  = "Trash {n} selected file{s}?"
+trash_origin = "center"
+trash_offset = [ 0, 0, 70, 20 ]
 
 # delete
-delete_title 	= "Permanently delete {n} selected file{s}?"
-delete_origin	= "center"
-delete_offset	= [ 0, 0, 70, 20 ]
+delete_title  = "Permanently delete {n} selected file{s}?"
+delete_origin = "center"
+delete_offset = [ 0, 0, 70, 20 ]
 
 # overwrite
 overwrite_title   = "Overwrite file?"
@@ -228,7 +228,7 @@ open_origin = "hovered"
 open_offset = [ 0, 1, 50, 7 ]
 
 [which]
-sort_by      	 = "none"
+sort_by        = "none"
 sort_sensitive = false
-sort_reverse 	 = false
+sort_reverse   = false
 sort_translit  = false
