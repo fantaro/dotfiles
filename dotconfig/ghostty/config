@@ -67,3 +67,5 @@ window-decoration = none
 window-padding-balance = true
 window-padding-x = 5
 window-padding-y = 5
+window-inherit-working-directory = true
+working-directory = inherit
