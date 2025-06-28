@@ -136,6 +136,9 @@ set showmatch
 " マッチしている括弧を表示するための時間を0.1秒単位で指定する
 set matchtime=2
 
+" サブフォルダまで検索する
+set path+=**
+
 " コマンドライン補完するときに強化されたものを使う
 set wildmenu
 
