@@ -57,6 +57,7 @@ keybind = ctrl+down=decrease_font_size:1
 # ==========================
 background-opacity = 0.9
 cursor-style = block
+cursor-style-blink = false
 font-family = Maple Mono NF CN
 font-size = 13
 mouse-hide-while-typing = true
