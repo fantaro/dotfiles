@@ -56,11 +56,13 @@ keybind = ctrl+down=decrease_font_size:1
 # My config
 # ==========================
 background-opacity = 0.9
+cursor-style = block
 font-family = Maple Mono NF CN
 font-size = 13
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 2
 shell-integration = zsh
+shell-integration-features = no-cursor
 theme = catppuccin-mocha
 unfocused-split-opacity = 0.8
 window-decoration = none
