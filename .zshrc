@@ -99,10 +99,6 @@ alias lla='ls -la'
 alias lt='ls --tree'
 alias lta='ls -a --tree'
 
-# alias for diff
-alias diff='diff --color=auto'
-alias vdiff='nvim -d'
-
 # alias for bat
 alias cat='bat --paging=never --theme=Nord'
 
@@ -126,3 +122,7 @@ alias glf='git log --follow -p'
 # alias for vim
 alias vi=vim
 alias vim=nvim
+
+# alias for diff
+alias diff='diff --color=auto'
+alias vdiff='vim -d'
