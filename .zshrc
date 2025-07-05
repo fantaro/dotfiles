@@ -16,7 +16,6 @@ ZSH_THEME="ys"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	archlinux
 	colored-man-pages
 	fzf
 	git
@@ -25,6 +24,9 @@ plugins=(
 	zsh-syntax-highlighting
 )
 export FZF_BASE=/usr/bin/fzf
+
+export EDITOR=/usr/bin/nvim
+export SUDO_EDITOR=/usr/bin/nvim
 
 source $ZSH/oh-my-zsh.sh
 
@@ -38,9 +40,6 @@ setopt appendhistory
 
 # User configuration
 pokemon-colorscripts -r | fastfetch -c $HOME/.config/fastfetch/config-pokemon.jsonc --logo-type file-raw --logo-height 10 --logo-width 5 --logo -
-
-export EDITOR=/usr/bin/nvim
-export SUDO_EDITOR=/usr/bin/nvim
 
 # alias for lsd
 alias ls=lsd

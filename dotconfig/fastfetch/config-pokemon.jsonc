@@ -41,13 +41,11 @@
             "key": " ",
             "keyColor": "blue"
         },
-        /*
         {
-            "type": "packages",
-            "key": "󰏖 ",
+            "type": "editor",
+            "key": " ",
             "keyColor": "yellow"
         },
-        */
         {
             "type": "memory",
             "key": "󰍛 ",
