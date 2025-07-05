@@ -1,4 +1,6 @@
 # My dotfiles
+
+```tree
 ├── .aria2
 │   └── aria2.conf
 ├── .bashrc
@@ -277,3 +279,4 @@
 │       ├── theme.toml
 │       └── yazi.toml
 └── README.md
+```
