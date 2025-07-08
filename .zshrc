@@ -76,3 +76,6 @@ alias vim=nvim
 # alias for diff
 alias diff='diff --color=auto'
 alias vdiff='vim -d'
+
+# alias for grep
+alias grep='grep --color=auto'
