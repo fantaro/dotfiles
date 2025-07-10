@@ -18,10 +18,8 @@ if command -v starship &> /dev/null; then
   eval "$(starship init bash)"
 fi
 
-pokemon-colorscripts --random
-
-export EDITOR=/usr/bin/nvim
-export SUDO_EDITOR=/usr/bin/nvim
+# User configuration
+pokemon-colorscripts -r | fastfetch -c $HOME/.config/fastfetch/config-pokemon.jsonc --logo-type file-raw --logo-height 10 --logo-width 5 --logo -
 
 # alias for lsd
 alias ls=lsd
@@ -30,10 +28,6 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 alias lta='ls -a --tree'
-
-# alias for diff
-alias diff='diff --color=auto'
-alias vdiff='nvim -d'
 
 # alias for bat
 alias cat='bat --paging=never --theme=Nord'
@@ -58,3 +52,10 @@ alias glf='git log --follow -p'
 # alias for vim
 alias vi=vim
 alias vim=nvim
+
+# alias for diff
+alias diff='diff --color=auto'
+alias vdiff='vim -d'
+
+# alias for grep
+alias grep='grep --color=auto'
