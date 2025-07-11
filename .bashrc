@@ -33,21 +33,18 @@ alias lta='ls -a --tree'
 alias cat='bat --paging=never --theme=Nord'
 
 # alias for git
-alias gs='git status'
-alias gsh='git show'
-alias gb='git branch'
-alias gck='git checkout'
-alias gcm='git checkout master'
 alias ga='git add'
 alias gac='git add . && git commit -m update'
+alias gb='git branch'
+alias gcd='git checkout develop'
+alias gck='git checkout'
+alias gcm='git checkout master'
 alias gd='git diff'
 alias gds='git diff --staged'
 alias gdw='git diff --word-diff'
 alias gdws='git diff --word-diff --staged'
-alias gl='git log --graph --all --abbrev-commit'
-alias gll='git log --graph --all'
-alias gln='git log --graph --abbrev-commit --name-only'
-alias glf='git log --follow -p'
+alias gsh='git show'
+alias gst='git status'
 
 # alias for vim
 alias vi=vim

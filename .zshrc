@@ -52,22 +52,9 @@ alias lta='ls -a --tree'
 # alias for bat
 alias cat='bat --paging=never --theme=Nord'
 
-# alias for git
-alias gs='git status'
-alias gsh='git show'
-alias gb='git branch'
-alias gck='git checkout'
-alias gcm='git checkout master'
-alias ga='git add'
+# alias for git (Not in omz's git plugin)
 alias gac='git add . && git commit -m update'
-alias gd='git diff'
-alias gds='git diff --staged'
-alias gdw='git diff --word-diff'
 alias gdws='git diff --word-diff --staged'
-alias gl='git log --graph --all --abbrev-commit'
-alias gll='git log --graph --all'
-alias gln='git log --graph --abbrev-commit --name-only'
-alias glf='git log --follow -p'
 
 # alias for vim
 alias vi=vim
