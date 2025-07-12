@@ -66,3 +66,8 @@ alias vdiff='vim -d'
 
 # alias for grep
 alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# alias for fzf (preview by vim)
+alias find='vim $(fzf --preview="bat --color=always {}")'
