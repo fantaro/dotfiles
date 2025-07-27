@@ -30,7 +30,7 @@ alias lt='ls --tree'
 alias lta='ls -a --tree'
 
 # alias for bat
-alias cat='bat --paging=never --theme=Nord'
+alias cat='bat --paging=never --theme=Dracula'
 
 # alias for git
 alias ga='git add'
