@@ -33,11 +33,12 @@ source $ZSH/oh-my-zsh.sh
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
 source <(fzf --zsh)
 
+# History configuration
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
-# ZSH Basic Options
+# ZSH basic options
 setopt APPEND_HISTORY
 setopt AUTO_CD
 setopt CORRECT
@@ -55,7 +56,7 @@ alias lt='ls --tree'
 alias lta='ls -a --tree'
 
 # alias for bat
-alias cat='bat --paging=never --theme=Nord'
+alias cat='bat --paging=never --theme=Dracula'
 
 # alias for git (Not in omz's git plugin)
 alias gac='git add . && git commit -m update'
