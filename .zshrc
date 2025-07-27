@@ -36,7 +36,12 @@ source <(fzf --zsh)
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
-setopt appendhistory
+
+# ZSH Basic Options
+setopt APPEND_HISTORY
+setopt AUTO_CD
+setopt CORRECT
+setopt NO_NOMATCH
 
 # User configuration
 pokemon-colorscripts -r | fastfetch -c $HOME/.config/fastfetch/config-pokemon.jsonc --logo-type file-raw --logo-height 10 --logo-width 5 --logo -
