@@ -1,13 +1,13 @@
--- nvimnvim     nvimnvim    nvim
---    nvim      nvim
---    nvim      nvim
---    nvim   nvim         nvimnvim       nvimnvimnvimnvim
---    nvim   nvim            nvim       nvim   nvim   nvim
---       nvimnvim            nvim       nvim   nvim   nvim
---       nvim                nvim       nvim   nvim   nvim
---       nvim           nvimnvimnvim    nvim   nvim   nvim
+--[[
+██╗   ██╗██╗███╗   ███╗
+██║   ██║██║████╗ ████║
+██║   ██║██║██╔████╔██║
+╚██╗ ██╔╝██║██║╚██╔╝██║
+ ╚████╔╝ ██║██║ ╚═╝ ██║
+  ╚═══╝  ╚═╝╚═╝     ╚═╝
+--]]
 
--- Last Change : 2025-03-03
+-- Last Change : 2025-08-02
 --  Maintainer : 樊 振剛（ハン シンゴウ）
 --        Mail : fantaro@gmail.com
 --      Github : https://github.com/fantaro

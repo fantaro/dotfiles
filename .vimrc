@@ -1,15 +1,13 @@
 " vim:set ts=8 sts=2 sw=2 tw=0: (この行に関しては:help modelineを参照)
-"
-" vimvim      vimvim      vim
-"    vim      vim
-"    vim      vim
-"    vim   vim         vimvim       vimvimvimvim
-"    vim   vim            vim       vim   vim   vim
-"       vimvim            vim       vim   vim   vim
-"       vim               vim       vim   vim   vim
-"       vim            vimvimvim    vim   vim   vim
 
-" Last Change : 2025-06-29
+" ██╗   ██╗██╗███╗   ███╗
+" ██║   ██║██║████╗ ████║
+" ██║   ██║██║██╔████╔██║
+" ╚██╗ ██╔╝██║██║╚██╔╝██║
+"  ╚████╔╝ ██║██║ ╚═╝ ██║
+"   ╚═══╝  ╚═╝╚═╝     ╚═╝
+
+" Last Change : 2025-08-02
 "  Maintainer : 樊 振剛（ハン シンゴウ）
 "        Mail : fantaro@gmail.com
 "      Github : https://github.com/fantaro
