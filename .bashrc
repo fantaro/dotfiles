@@ -11,7 +11,6 @@
 # ridden in every subshell.
 
 test -s ~/.alias && . ~/.alias || true
-. "$HOME/.cargo/env"
 
 if command -v starship &> /dev/null; then
   eval "$(starship completions bash)"
@@ -60,4 +59,4 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # alias for fzf (preview by vim)
-alias find='vim $(fzf --preview="bat --color=always {}")'
+alias vfind='vim $(fzf --preview="bat --color=always {}")'
