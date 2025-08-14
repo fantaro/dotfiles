@@ -62,8 +62,6 @@
 │   ├── kitty
 │   │   ├── current-theme.conf
 │   │   ├── kitty-themes
-│   │   │   ├── 00-Default.conf
-│   │   │   ├── 01-Wallust.conf
 │   │   │   ├── 3024_Day.conf
 │   │   │   ├── 3024_Night.conf
 │   │   │   ├── AdventureTime.conf
@@ -134,6 +132,7 @@
 │   │   │   ├── IC_Green_PPL.conf
 │   │   │   ├── IC_Orange_PPL.conf
 │   │   │   ├── idleToes.conf
+│   │   │   ├── init.conf
 │   │   │   ├── IR_Black.conf
 │   │   │   ├── Jackie_Brown.conf
 │   │   │   ├── Japanesque.conf
