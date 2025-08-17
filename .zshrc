@@ -26,7 +26,7 @@ plugins=(
 export FZF_BASE=/usr/bin/fzf
 
 export EDITOR=/usr/bin/nvim
-export SUDO_EDITOR=/usr/bin/nvim
+export SUDO_EDITOR=$EDITOR
 
 source $ZSH/oh-my-zsh.sh
 

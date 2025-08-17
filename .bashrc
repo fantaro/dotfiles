@@ -17,6 +17,9 @@ if command -v starship &> /dev/null; then
   eval "$(starship init bash)"
 fi
 
+export EDITOR=/usr/bin/nvim
+export SUDO_EDITOR=$EDITOR
+
 # User configuration
 pokemon-colorscripts -r | fastfetch -c $HOME/.config/fastfetch/config-pokemon.jsonc --logo-type file-raw --logo-height 10 --logo-width 5 --logo -
 
