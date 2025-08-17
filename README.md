@@ -278,6 +278,5 @@
 │       └── yazi.toml
 ├── .tmux.conf
 ├── .vimrc
-├── .zshenv
 └── .zshrc
 ```
