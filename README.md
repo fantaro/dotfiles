@@ -248,6 +248,108 @@
 │   │           ├── lazy.lua
 │   │           └── options.lua
 │   ├── starship.toml
+│   ├── tmux
+│   │   └── plugins
+│   │       └── catppuccin
+│   │           └── tmux
+│   │               ├── .editorconfig
+│   │               ├── .github
+│   │               │   ├── ISSUE_TEMPLATE
+│   │               │   │   ├── bug.yml
+│   │               │   │   ├── config.yml
+│   │               │   │   ├── enhancement.yml
+│   │               │   │   └── meta.yml
+│   │               │   ├── release-please-config.json
+│   │               │   ├── release-please-manifest.json
+│   │               │   └── workflows
+│   │               │       ├── release.yml
+│   │               │       ├── shellcheck.yml
+│   │               │       └── test.yml
+│   │               ├── .gitignore
+│   │               ├── .markdownlint.jsonc
+│   │               ├── .shellcheckrc
+│   │               ├── assets
+│   │               │   ├── config1.png
+│   │               │   ├── config2.png
+│   │               │   ├── config3.png
+│   │               │   ├── demos
+│   │               │   │   ├── basic.conf
+│   │               │   │   ├── basic.gif
+│   │               │   │   └── basic.tape
+│   │               │   ├── example-config.webp
+│   │               │   ├── frappe.webp
+│   │               │   ├── generate_preview.fish
+│   │               │   ├── latte.webp
+│   │               │   ├── macchiato.webp
+│   │               │   ├── mocha.webp
+│   │               │   ├── preview.webp
+│   │               │   ├── ram-example.webp
+│   │               │   ├── structure.svg
+│   │               │   ├── window-basic.webp
+│   │               │   ├── window-none.webp
+│   │               │   ├── window-rounded.webp
+│   │               │   └── window-slanted.webp
+│   │               ├── catppuccin.tmux
+│   │               ├── catppuccin_options_tmux.conf
+│   │               ├── catppuccin_tmux.conf
+│   │               ├── CHANGELOG.md
+│   │               ├── CONTRIBUTING.md
+│   │               ├── docs
+│   │               │   ├── explanation
+│   │               │   │   └── design.md
+│   │               │   ├── guides
+│   │               │   │   └── troubleshooting.md
+│   │               │   ├── reference
+│   │               │   │   ├── configuration.md
+│   │               │   │   └── status-line.md
+│   │               │   └── tutorials
+│   │               │       ├── 01-getting-started.md
+│   │               │       └── 02-custom-status.md
+│   │               ├── LICENSE
+│   │               ├── README.md
+│   │               ├── renovate.json
+│   │               ├── run_tests.sh
+│   │               ├── status
+│   │               │   ├── application.conf
+│   │               │   ├── battery.conf
+│   │               │   ├── clima.conf
+│   │               │   ├── cpu.conf
+│   │               │   ├── date_time.conf
+│   │               │   ├── directory.conf
+│   │               │   ├── gitmux.conf
+│   │               │   ├── host.conf
+│   │               │   ├── kube.conf
+│   │               │   ├── load.conf
+│   │               │   ├── pomodoro_plus.conf
+│   │               │   ├── session.conf
+│   │               │   ├── uptime.conf
+│   │               │   ├── user.conf
+│   │               │   └── weather.conf
+│   │               ├── tests
+│   │               │   ├── application_module.sh
+│   │               │   ├── application_module_expected.txt
+│   │               │   ├── battery_module.sh
+│   │               │   ├── battery_module_expected.txt
+│   │               │   ├── cpu_module.sh
+│   │               │   ├── cpu_module_expected.txt
+│   │               │   ├── default_options.sh
+│   │               │   ├── default_options_expected.txt
+│   │               │   ├── harness.sh
+│   │               │   ├── helpers.sh
+│   │               │   ├── load_module.sh
+│   │               │   ├── load_module_expected.txt
+│   │               │   ├── pane_styling.sh
+│   │               │   ├── pane_styling_expected.txt
+│   │               │   ├── window_status_styling.sh
+│   │               │   └── window_status_styling_expected.txt
+│   │               ├── themes
+│   │               │   ├── catppuccin_frappe_tmux.conf
+│   │               │   ├── catppuccin_latte_tmux.conf
+│   │               │   ├── catppuccin_macchiato_tmux.conf
+│   │               │   └── catppuccin_mocha_tmux.conf
+│   │               ├── tmux.tera
+│   │               └── utils
+│   │                   └── status_module.conf
 │   ├── wezterm
 │   │   └── wezterm.lua
 │   └── yazi
