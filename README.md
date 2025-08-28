@@ -8,8 +8,12 @@
 ├── .config
 │   ├── alacritty
 │   │   └── alacritty.toml
+│   ├── brave-flags.conf
 │   ├── btop
 │   │   └── btop.conf
+│   ├── chromium-flags.conf
+│   ├── environment.d
+│   │   └── fcitx.conf
 │   ├── eza
 │   │   └── theme.yml
 │   ├── fastfetch
@@ -252,22 +256,6 @@
 │   │   └── plugins
 │   │       └── catppuccin
 │   │           └── tmux
-│   │               ├── .editorconfig
-│   │               ├── .github
-│   │               │   ├── ISSUE_TEMPLATE
-│   │               │   │   ├── bug.yml
-│   │               │   │   ├── config.yml
-│   │               │   │   ├── enhancement.yml
-│   │               │   │   └── meta.yml
-│   │               │   ├── release-please-config.json
-│   │               │   ├── release-please-manifest.json
-│   │               │   └── workflows
-│   │               │       ├── release.yml
-│   │               │       ├── shellcheck.yml
-│   │               │       └── test.yml
-│   │               ├── .gitignore
-│   │               ├── .markdownlint.jsonc
-│   │               ├── .shellcheckrc
 │   │               ├── assets
 │   │               │   ├── config1.png
 │   │               │   ├── config2.png
