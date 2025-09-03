@@ -237,6 +237,8 @@
 │   │   │   ├── Wryan.conf
 │   │   │   └── Zenburn.conf
 │   │   └── kitty.conf
+│   ├── lazygit
+│   │   └── config.yml
 │   ├── lsd
 │   │   ├── config.yaml
 │   │   └── icons.yaml
