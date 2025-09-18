@@ -1,15 +1,24 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/rose_pine_moon.toml"
+]
+
 [window]
+decorations = "None"
 dimensions = { columns = 120, lines = 32 }
-padding = { x = 4, y = 4 }
 opacity = 0.9
+padding = { x = 5, y = 5 }
 
 [font]
-normal = { family = "Hack Nerd Font Mono", style = "Regular" }
-bold = { family = "Hack Nerd Font Mono", style = "Bold" }
-italic = { family = "Hack Nerd Font Mono", style = "Italic" }
-bold_italic = { family = "Hack Nerd Font Mono", style = "Bold Italic" }
-size = 12.0
+normal = { family = "Maple Mono NF CN", style = "Medium" }
+bold = { family = "Maple Mono NF CN", style = "Bold" }
+italic = { family = "Maple Mono NF CN", style = "Medium Italic" }
+bold_italic = { family = "Maple Mono NF CN", style = "Bold Italic" }
+size = 13.0
 offset = { x = 0, y = 1 }
 
 [selection]
 save_to_clipboard = true
+
+[mouse]
+hide_when_typing = true
