@@ -33,6 +33,8 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 edit = [
 	{ run = '${EDITOR:-nvim} "$@"', desc = "$EDITOR", block = true, for = "unix" },
 	{ run = 'code $@', desc = "VS Code", block = true, for = "unix" },
+	{ run = 'nvim %*', desc = "NeoVim", block = true, for = "windows" },
+	{ run = 'neovide %*', desc = "Neovide", block = true, for = "windows" },
 	{ run = 'vim %*', desc = "Vim", block = true, for = "windows" },
 	{ run = 'gvim %*', desc = "gVim", block = true, for = "windows" },
 	{ run = 'code %*',    orphan = true, desc = "code", for = "windows" },
