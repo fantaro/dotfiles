@@ -12,7 +12,7 @@
        ~~~~                   \__\/
 --]]
 
--- Last Change : 2025-08-02
+-- Last Change : 2025-11-26
 --  Maintainer : 樊 振剛（ハン シンゴウ）
 --        Mail : fantaro@gmail.com
 --      Github : https://github.com/fantaro
@@ -27,6 +27,9 @@ local map = vim.keymap.set
 -- Function key mappings --------------------------------------
 -- F2: Create new tab
 map("n", "<F2>", "<cmd>tabnew<cr>", { silent = true })
+
+-- F3: Toggle spell check
+map("n", "<F3>", "<cmd>setlocal spell!<cr>")
 
 -- F4: Interactive search/replace
 map("n", "<F4>", ":%s///gc<Left><Left><Left><Left>")

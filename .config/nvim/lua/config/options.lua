@@ -12,7 +12,7 @@
        ~~~~                   \__\/
 --]]
 
--- Last Change : 2025-08-02
+-- Last Change : 2025-11-26
 --  Maintainer : 樊 振剛（ハン シンゴウ）
 --        Mail : fantaro@gmail.com
 --      Github : https://github.com/fantaro
@@ -27,6 +27,6 @@ vim.opt.clipboard = ""
 vim.opt.expandtab = false
 vim.opt.jumpoptions = "stack"
 vim.opt.shiftwidth = 4
+vim.opt.spelllang = { "en", "cjk" }
 vim.opt.tabstop = 4
 vim.opt.wrapscan = false
-
