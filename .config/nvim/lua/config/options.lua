@@ -12,7 +12,7 @@
        ~~~~                   \__\/
 --]]
 
--- Last Change : 2025-11-26
+-- Last Change : 2025-12-24
 --  Maintainer : 樊 振剛（ハン シンゴウ）
 --        Mail : fantaro@gmail.com
 --      Github : https://github.com/fantaro
@@ -22,6 +22,10 @@
 -- Add any additional options here
 vim.g.mapleader = ","
 vim.g.autoformat = false
+vim.g.neovide_cursor_vfx_mode = "railgun"
+-- vim.g.neovide_cursor_vfx_mode = "torpedo"
+-- vim.g.neovide_cursor_vfx_mode = "pixiedust"
+vim.g.snacks_animate = false
 
 vim.opt.clipboard = ""
 vim.opt.expandtab = false
