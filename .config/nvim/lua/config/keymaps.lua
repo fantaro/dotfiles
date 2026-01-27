@@ -12,7 +12,7 @@
        ~~~~                   \__\/
 --]]
 
--- Last Change : 2025-11-26
+-- Last Change : 2026-01-27
 --  Maintainer : 樊 振剛（ハン シンゴウ）
 --        Mail : fantaro@gmail.com
 --      Github : https://github.com/fantaro
@@ -61,8 +61,16 @@ map({"n", "v", "o"}, "<Space>", "5<C-e>")
 map({"n", "v", "o"}, "<S-Space>", "5<C-y>")
 
 -- Execute macros with lazyredraw for better performance
-map("n", "@", '<cmd>set lazyredraw <bar> execute "noautocmd norm! " . v:count1 . "@" . getcharstr() <bar> set nolazyredraw<cr>')
-
+map('n', '@', function()
+    local count = vim.v.count1
+    local register = vim.fn.getcharstr()
+    vim.opt.lazyredraw = true
+    vim.cmd("syntax off")
+    -- Execute the macro, turning off auto commands (noa) for even more speed
+    vim.api.nvim_command(string.format('noa norm! %d@%s', count, register))
+    vim.cmd("syntax off")
+    vim.opt.lazyredraw = false
+end, { noremap = true, desc = "Faster macro execution" })
 -- Disable dangerous quit shortcuts
 map("n", "ZZ", "<NOP>")
 map("n", "ZQ", "<NOP>")
@@ -83,4 +91,5 @@ map("v", "<leader>y", "\"+y", { desc = "Copy to system clipboard." })
 -- Paste from system clipboard
 map({"n", "v", "o"}, "<leader>p", "\"+gP", { desc = "Paste from system clipboard." })
 map({"i", "c"}, "<leader>p", "<C-r>+", { desc = "Paste from system clipboard." })
+
 
