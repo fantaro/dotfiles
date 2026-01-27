@@ -68,7 +68,7 @@ map('n', '@', function()
     vim.cmd("syntax off")
     -- Execute the macro, turning off auto commands (noa) for even more speed
     vim.api.nvim_command(string.format('noa norm! %d@%s', count, register))
-    vim.cmd("syntax off")
+    vim.cmd("syntax on")
     vim.opt.lazyredraw = false
 end, { noremap = true, desc = "Faster macro execution" })
 -- Disable dangerous quit shortcuts
@@ -91,5 +91,6 @@ map("v", "<leader>y", "\"+y", { desc = "Copy to system clipboard." })
 -- Paste from system clipboard
 map({"n", "v", "o"}, "<leader>p", "\"+gP", { desc = "Paste from system clipboard." })
 map({"i", "c"}, "<leader>p", "<C-r>+", { desc = "Paste from system clipboard." })
+
 
 
