@@ -91,6 +91,3 @@ map("v", "<leader>y", "\"+y", { desc = "Copy to system clipboard." })
 -- Paste from system clipboard
 map({"n", "v", "o"}, "<leader>p", "\"+gP", { desc = "Paste from system clipboard." })
 map({"i", "c"}, "<leader>p", "<C-r>+", { desc = "Paste from system clipboard." })
-
-
-
