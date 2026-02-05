@@ -12,7 +12,7 @@
        ~~~~                   \__\/
 --]]
 
--- Last Change : 2026-01-27
+-- Last Change : 2026-02-05
 --  Maintainer : 樊 振剛（ハン シンゴウ）
 --        Mail : fantaro@gmail.com
 --      Github : https://github.com/fantaro
@@ -62,6 +62,7 @@ map({"n", "v", "o"}, "<S-Space>", "5<C-y>")
 
 -- Execute macros with lazyredraw for better performance
 map('n', '@', function()
+	print("Macro start !")
     local count = vim.v.count1
     local register = vim.fn.getcharstr()
     vim.opt.lazyredraw = true
@@ -70,7 +71,9 @@ map('n', '@', function()
     vim.api.nvim_command(string.format('noa norm! %d@%s', count, register))
     vim.cmd("syntax on")
     vim.opt.lazyredraw = false
+	print("Macro end !")
 end, { noremap = true, desc = "Faster macro execution" })
+
 -- Disable dangerous quit shortcuts
 map("n", "ZZ", "<NOP>")
 map("n", "ZQ", "<NOP>")
