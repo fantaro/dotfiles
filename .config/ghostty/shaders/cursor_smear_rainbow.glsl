@@ -1,4 +1,4 @@
-// Cursor trail shader that creates a hexagonal trailing effect with fade
+// Cursor trail shader that creates a hexagonal trailing effect with rainbow plasma
 
 // Process each edge: compute distance and determine if point is inside
 void processEdge(vec2 p, vec2 a, vec2 b, inout float minDist, inout float inside) {
@@ -151,25 +151,36 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec2 currentCenter = currentPos + vec2(halfCurrentSize.x, -halfCurrentSize.y);
     float sdfCurrentCursor = sdRectangle(normCoord, currentCenter, halfCurrentSize);
 
+    // Generate rainbow plasma effect
+    float v1v = sin(normCoord.x * 10.0 + iTime);
+    float v2v = sin(normCoord.y * 10.0 + iTime * 4.5);
+    float v3v = sin((normCoord.x + normCoord.y) * 10.0 + iTime * 0.5);
+    float v4v = sin(length(normCoord) * 10.0 + iTime * 2.0);
+
+    float plasma = (v1v + v2v + v3v + v4v) / 4.0;
+    vec4 rainbowColor = vec4(
+            0.5 + 0.5 * sin(plasma * 6.28 + 0.0),
+            0.5 + 0.5 * sin(plasma * 6.28 + 2.09),
+            0.5 + 0.5 * sin(plasma * 6.28 + 4.18),
+            1.0
+        );
+
     // Calculate line length (distance between cursor centers)
     vec2 previousCenter = previousPos + vec2(previousSize.x * 0.5, -previousSize.y * 0.5);
     float lineLength = distance(currentCenter, previousCenter);
-
-    // Base trail color
-    const vec4 TRAIL_COLOR = vec4(1.0, 1.0, 0.0, 1.0);
 
     // Compute fade factor based on distance from current cursor
     float distFromCursor = distance(normCoord, currentCenter);
     float fadeFactor = 1.0 - smoothstep(0.0, lineLength, distFromCursor);
 
-    // Apply fading effect to trail color
-    vec4 fadedTrailColor = TRAIL_COLOR * fadeFactor;
+    // Apply fading effect to rainbow color
+    vec4 fadedRainbowColor = rainbowColor * fadeFactor;
 
     // Enhance color saturation for more vibrant trail effect
-    float gray = dot(fadedTrailColor.rgb, vec3(0.299, 0.587, 0.114));
+    float gray = dot(fadedRainbowColor.rgb, vec3(0.299, 0.587, 0.114));
     const float saturationBoost = 1.8;
     vec4 enhancedColor = clamp(
-        mix(vec4(vec3(gray), fadedTrailColor.a), fadedTrailColor, saturationBoost),
+        mix(vec4(vec3(gray), fadedRainbowColor.a), fadedRainbowColor, saturationBoost),
         0.0, 1.0
     );
 

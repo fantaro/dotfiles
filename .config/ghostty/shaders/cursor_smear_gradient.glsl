@@ -1,4 +1,8 @@
-// Cursor trail shader that creates a hexagonal trailing effect with fade
+// Shader Contribution by PremModhaOfficial
+// For inquiries or modifications, please reach him
+// GitHub: https://github.com/PremModhaOfficial
+//
+// Cursor trail shader that creates a hexagonal trailing effect with gradient colors
 
 // Process each edge: compute distance and determine if point is inside
 void processEdge(vec2 p, vec2 a, vec2 b, inout float minDist, inout float inside) {
@@ -90,8 +94,23 @@ float easeClamped(float x) {
     return 1.0 - t * t * t;
 }
 
+// Generate gradient color based on position
+vec3 gradientColor(float factor) {
+    // ADD your custom colors here make sure to change the numColors variable
+    vec3 colors[3] = vec3[3](
+            vec3(1.0, 0.843, 0.0),   // Gold
+            vec3(0.216, 1.0, 0.58),  // Green
+            vec3(0.0, 0.663, 1.0)    // Blue
+        );
+    int numColors = 3;
+    float segment = 1.0 / float(numColors);
+    int index = int(mod(factor, 1.0) / segment);
+    float localFactor = fract(factor / segment);
+    return mix(colors[index % numColors], colors[(index + 1) % numColors], localFactor);
+}
+
 // Trail animation duration in seconds
-const float DURATION = 0.5;
+const float DURATION = 0.25;
 
 void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     // Calculate animation progress with easing
@@ -151,25 +170,17 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec2 currentCenter = currentPos + vec2(halfCurrentSize.x, -halfCurrentSize.y);
     float sdfCurrentCursor = sdRectangle(normCoord, currentCenter, halfCurrentSize);
 
-    // Calculate line length (distance between cursor centers)
-    vec2 previousCenter = previousPos + vec2(previousSize.x * 0.5, -previousSize.y * 0.5);
-    float lineLength = distance(currentCenter, previousCenter);
-
-    // Base trail color
-    const vec4 TRAIL_COLOR = vec4(1.0, 1.0, 0.0, 1.0);
-
-    // Compute fade factor based on distance from current cursor
-    float distFromCursor = distance(normCoord, currentCenter);
-    float fadeFactor = 1.0 - smoothstep(0.0, lineLength, distFromCursor);
-
-    // Apply fading effect to trail color
-    vec4 fadedTrailColor = TRAIL_COLOR * fadeFactor;
+    // Generate gradient color
+    float gradientFactor = (normCoord.y + 1.0) * 0.5; // Gradient across vertical position
+    float timeComponent = sin(iTime); // Oscillates between -1 and 1
+    vec3 trailColorVec3 = gradientColor(gradientFactor * timeComponent);
+    vec4 trail = vec4(trailColorVec3, 0.8); // Set alpha for gradient trail
 
     // Enhance color saturation for more vibrant trail effect
-    float gray = dot(fadedTrailColor.rgb, vec3(0.299, 0.587, 0.114));
+    float gray = dot(trail.rgb, vec3(0.299, 0.587, 0.114));
     const float saturationBoost = 1.8;
     vec4 enhancedColor = clamp(
-        mix(vec4(vec3(gray), fadedTrailColor.a), fadedTrailColor, saturationBoost),
+        mix(vec4(vec3(gray), trail.a), trail, saturationBoost),
         0.0, 1.0
     );
 
