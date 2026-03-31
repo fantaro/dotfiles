@@ -12,7 +12,7 @@
        ~~~~                   \__\/
 --]]
 
--- Last Change : 2026-02-05
+-- Last Change : 2026-03-31
 --  Maintainer : 樊 振剛（ハン シンゴウ）
 --        Mail : fantaro@gmail.com
 --      Github : https://github.com/fantaro
@@ -26,26 +26,26 @@ local map = vim.keymap.set
 
 -- Function key mappings --------------------------------------
 -- F2: Create new tab
-map("n", "<F2>", "<cmd>tabnew<cr>", { silent = true })
+map("n", "<F2>", "<cmd>tabnew<cr>", { silent = true, desc = "Create new tab" })
 
 -- F3: Toggle spell check
-map("n", "<F3>", "<cmd>setlocal spell!<cr>")
+map("n", "<F3>", "<cmd>setlocal spell!<cr>", { desc = "Toggle spell check" })
 
 -- F4: Interactive search/replace
-map("n", "<F4>", ":%s///gc<Left><Left><Left><Left>")
-map("v", "<F4>", ":s///gc<Left><Left><Left><Left>")
+map("n", "<F4>", ":%s///gc<Left><Left><Left><Left>", { desc = "Interactive search/replace" })
+map("v", "<F4>", ":s///gc<Left><Left><Left><Left>", { desc = "Interactive search/replace" })
 
--- F6: Reload file with different encoding (fix file encoding issues)
-map("n", "<F6>", ":e ++enc=latin1|macroman|cp932|euc-jp|sjis|cp949|euc-kr|cp936|euc-cn|cp950|big5|euc-tw|utf-8|ucs-2|ucs-2le|utf-16|utf-16le")
+-- F6: Reload file with different encoding
+map("n", "<F6>", ":e ++enc=latin1|macroman|cp932|euc-jp|sjis|cp949|euc-kr|cp936|euc-cn|cp950|big5|euc-tw|utf-8|ucs-2|ucs-2le|utf-16|utf-16le", { desc = "Reload file with different encoding" })
 
 -- F7: Change file format (line endings)
-map("n", "<F7>", ":e ++ff=dos|unix|mac")
+map("n", "<F7>", ":e ++ff=dos|unix|mac", { desc = "Change file format" })
 
 -- F8: Toggle relative line numbers
-map("n", "<F8>", "<cmd>setlocal relativenumber!<cr>")
+map("n", "<F8>", "<cmd>setlocal relativenumber!<cr>", { desc = "Toggle relative line numbers" })
 
 -- F9: Show register contents
-map("n", "<F9>", "<cmd>registers<cr>", { silent = true })
+map("n", "<F9>", "<cmd>registers<cr>", { silent = true, desc = "Show register contents" })
 
 -- Normal key mappings --------------------------------------
 -- Use Ctrl+hjkl for navigation in command mode
