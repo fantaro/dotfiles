@@ -49,14 +49,14 @@ setopt NO_NOMATCH
 fastfetch -c $HOME/.config/fastfetch/config.jsonc --logo-type file-raw --logo-height 10 --logo-width 5
 
 # alias for eza
-alias ls='eza --color=always --group-directories-first --icons=always'
-alias ll='eza -l --color=always --group-directories-first --icons=always'
-alias la='eza -a --color=always --group-directories-first --icons=always'
-alias lla='eza -al --color=always --group-directories-first --icons=always'
-alias lt='eza -T --color=always --group-directories-first --icons=always'
-alias lta='eza -aT --color=always --group-directories-first --icons=always'
-alias lt1='eza -T --color=always --group-directories-first --level=1 --icons=always'
-alias lta1='eza -aT --color=always --group-directories-first --level=1 --icons=always'
+alias ls='eza --color=always --group-directories-first --icons=always --time-style=long-iso'
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -al'
+alias lt='ls -T'
+alias lta='ls -aT'
+alias lt1='ls -T --level=1'
+alias lta1='ls -aT --level=1'
 alias l.="eza -a | grep -e '^\.'"
 
 # alias for bat
