@@ -48,13 +48,16 @@ setopt NO_NOMATCH
 # pokemon-colorscripts -r | fastfetch -c $HOME/.config/fastfetch/config-pokemon.jsonc --logo-type file-raw --logo-height 10 --logo-width 5 --logo -
 fastfetch -c $HOME/.config/fastfetch/config.jsonc --logo-type file-raw --logo-height 10 --logo-width 5
 
-# alias for lsd
-alias ls=lsd
-alias ll='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias lt='ls --tree'
-alias lta='ls -a --tree'
+# alias for eza
+alias ls='eza --color=always --group-directories-first --icons=always'
+alias ll='eza -l --color=always --group-directories-first --icons=always'
+alias la='eza -a --color=always --group-directories-first --icons=always'
+alias lla='eza -al --color=always --group-directories-first --icons=always'
+alias lt='eza -T --color=always --group-directories-first --icons=always'
+alias lta='eza -aT --color=always --group-directories-first --icons=always'
+alias lt1='eza -T --color=always --group-directories-first --level=1 --icons=always'
+alias lta1='eza -aT --color=always --group-directories-first --level=1 --icons=always'
+alias l.="eza -a | grep -e '^\.'"
 
 # alias for bat
 alias cat='bat --paging=never --theme=Dracula'
@@ -78,3 +81,7 @@ alias egrep='egrep --color=auto'
 
 # alias for fzf (preview by vim)
 alias vfind='vim $(fzf --preview="bat --color=always {}")'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
