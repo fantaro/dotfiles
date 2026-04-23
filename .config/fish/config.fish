@@ -4,7 +4,6 @@ set -gx SUDO_EDITOR $EDITOR
 set -gx FZF_BASE /usr/bin/fzf
 
 # ---- Lazy load (reduce startup time) ----
-
 # fastfetch
 if status is-interactive
     fastfetch -c $HOME/.config/fastfetch/config.jsonc \
@@ -17,10 +16,13 @@ end
 function __load_fzf --on-event fish_prompt
     functions -e __load_fzf
     fzf --fish | source
+	# Enable the following command-line key bindings
+	# CTRL-T - Paste the selected files and directories onto the command-line
+	# CTRL-R - Paste the selected command from history onto the command-line
+	#  ALT-C - cd into the selected directory
 end
 
 # ---- Aliases ----
-
 # eza
 function ls
     eza --color=always --group-directories-first --icons=always --time-style=long-iso $argv
@@ -143,10 +145,6 @@ fish_add_path -g ~/.local/bin
 
 # ---- Performance tweaks ----
 set -g fish_greeting
-
-# ---- Optional: better history search ----
-# Ctrl-R improved (if fzf loaded)
-bind \cr 'fzf-history-widget'
 
 # ---- Prompt ----
 starship init fish | source
