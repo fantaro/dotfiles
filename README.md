@@ -7,7 +7,8 @@
 ├── .bashrc
 ├── .config
 │   ├── alacritty
-│   │   └── alacritty.toml
+│   │   ├── alacritty.toml
+│   │   └── themes
 │   ├── brave-flags.conf
 │   ├── btop
 │   │   └── btop.conf
@@ -20,22 +21,32 @@
 │   │   ├── config-compact.jsonc
 │   │   ├── config-pokemon.jsonc
 │   │   └── config.jsonc
+│   ├── fish
+│   │   └── config.fish
 │   ├── ghostty
 │   │   ├── config
 │   │   └── shaders
 │   │       ├── animated-gradient-shader.glsl
+│   │       ├── auto-tracking-spotlight
 │   │       ├── bettercrt.glsl
+│   │       ├── blaze_sparks.glsl
 │   │       ├── bloom.glsl
 │   │       ├── cineShader-Lava.glsl
 │   │       ├── crt.glsl
 │   │       ├── cubes.glsl
 │   │       ├── cursor_blaze.glsl
-│   │       ├── cursor_blaze_1.glsl
 │   │       ├── cursor_blaze_no_trail.glsl
 │   │       ├── cursor_blaze_tapered.glsl
+│   │       ├── cursor_border_1.glsl
 │   │       ├── cursor_frozen.glsl
 │   │       ├── cursor_smear.glsl
 │   │       ├── cursor_smear_fade.glsl
+│   │       ├── cursor_smear_fade_original.glsl
+│   │       ├── cursor_smear_gradient.glsl
+│   │       ├── cursor_smear_gradient_original.glsl
+│   │       ├── cursor_smear_original.glsl
+│   │       ├── cursor_smear_rainbow.glsl
+│   │       ├── cursor_smear_rainbow_original.glsl
 │   │       ├── debug_cursor_animated.glsl
 │   │       ├── debug_cursor_static.glsl
 │   │       ├── dither.glsl
@@ -47,24 +58,32 @@
 │   │       ├── glitchy.glsl
 │   │       ├── glow-rgbsplit-twitchy.glsl
 │   │       ├── gradient-background.glsl
+│   │       ├── in-game-crt-cursor.glsl
 │   │       ├── in-game-crt.glsl
 │   │       ├── inside-the-matrix.glsl
 │   │       ├── just-snow.glsl
+│   │       ├── last_letter_zoom.glsl
 │   │       ├── manga_slash.glsl
 │   │       ├── matrix-hallway.glsl
 │   │       ├── mnoise.glsl
 │   │       ├── negative.glsl
+│   │       ├── party_sparks.glsl
+│   │       ├── Readme.md
 │   │       ├── retro-terminal.glsl
+│   │       ├── shake.glsl
 │   │       ├── sin-interference.glsl
 │   │       ├── smoke-and-ghost.glsl
 │   │       ├── sparks-from-fire.glsl
+│   │       ├── sparks.glsl
 │   │       ├── spotlight.glsl
 │   │       ├── starfield-colors.glsl
 │   │       ├── starfield.glsl
+│   │       ├── test.glsl
 │   │       ├── tft.glsl
 │   │       ├── underwater.glsl
 │   │       ├── water.glsl
-│   │       └── WIP.glsl
+│   │       ├── WIP.glsl
+│   │       └── zoom_and_aberration.glsl
 │   ├── KDE_Keymaps.kksrc
 │   ├── kitty
 │   │   ├── current-theme.conf
@@ -345,32 +364,37 @@
 │   │                   └── status_module.conf
 │   ├── wezterm
 │   │   └── wezterm.lua
-│   └── yazi
-│       ├── flavors
-│       │   └── catppuccin-mocha.yazi
-│       │       ├── flavor.toml
-│       │       ├── LICENSE
-│       │       ├── LICENSE-tmtheme
-│       │       ├── preview.png
-│       │       ├── README.md
-│       │       └── tmtheme.xml
-│       ├── keymap.toml
-│       ├── package.toml
-│       ├── plugins
-│       │   ├── diff.yazi
-│       │   │   ├── LICENSE
-│       │   │   ├── main.lua
-│       │   │   └── README.md
-│       │   ├── mount.yazi
-│       │   │   ├── LICENSE
-│       │   │   ├── main.lua
-│       │   │   └── README.md
-│       │   └── ouch.yazi
-│       │       ├── LICENSE
-│       │       ├── main.lua
-│       │       └── README.md
-│       ├── theme.toml
-│       └── yazi.toml
+│   ├── yazi
+│   │   ├── flavors
+│   │   │   └── catppuccin-mocha.yazi
+│   │   │       ├── flavor.toml
+│   │   │       ├── LICENSE
+│   │   │       ├── LICENSE-tmtheme
+│   │   │       ├── preview.png
+│   │   │       ├── README.md
+│   │   │       └── tmtheme.xml
+│   │   ├── keymap.toml
+│   │   ├── package.toml
+│   │   ├── plugins
+│   │   │   ├── diff.yazi
+│   │   │   │   ├── LICENSE
+│   │   │   │   ├── main.lua
+│   │   │   │   └── README.md
+│   │   │   ├── mount.yazi
+│   │   │   │   ├── LICENSE
+│   │   │   │   ├── main.lua
+│   │   │   │   └── README.md
+│   │   │   └── ouch.yazi
+│   │   │       ├── LICENSE
+│   │   │       ├── main.lua
+│   │   │       └── README.md
+│   │   ├── theme.toml
+│   │   └── yazi.toml
+│   └── zellij
+│       ├── config.kdl
+│       └── themes
+│           ├── catppuccin.kdl
+│           └── rose-pine.kdl
 ├── .tmux.conf
 ├── .vimrc
 └── .zshrc
