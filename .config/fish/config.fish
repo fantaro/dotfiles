@@ -135,16 +135,30 @@ function vfind
     and nvim $file
 end
 
-# ---- Node (fast alternative to nvm) ----
-if type -q fnm
-    fnm env --use-on-cd | source
+# ---- PATH optimization ----
+if test -d ~/.local/bin
+    fish_add_path -g ~/.local/bin
 end
 
-# ---- PATH optimization ----
-fish_add_path -g ~/.local/bin
+if test -d ~/.cargo/bin
+    fish_add_path -g ~/.cargo/bin
+end
 
 # ---- Performance tweaks ----
 set -g fish_greeting
 
-# ---- Prompt ----
-starship init fish | source
+# ---- Initialization of tools ----
+# fnm (Fast and simple Node.js version manager)
+if type -q fnm
+    fnm env --use-on-cd | source
+end
+
+# zoxide (Smarter cd command, inspired by z and autojump)
+if type -q zoxide
+    zoxide init fish | source
+end
+
+# starship (The minimal, blazing-fast, and infinitely customizable prompt)
+if type -q starship
+    starship init fish | source
+end
