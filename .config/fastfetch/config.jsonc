@@ -8,17 +8,17 @@
 		}
 	},
     "display": {
-		"separator": "   "
+		"separator": "  "
     },
     "modules": [
         {
             "type": "title",
-            "key": "    ",
+            "key": "    ",
             "keyColor": "34",
         },
         {
             "type": "uptime",
-            "key": "    ",
+            "key": "    ",
             "keyColor": "36",
         },
         "separator",
@@ -80,7 +80,7 @@
         },
         {
             "type": "cursor",
-            "key": " ├ 󰇀 ",
+            "key": " └ 󰇀 ",
             "keyColor": "32",
         },
         "break",
