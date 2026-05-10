@@ -33,10 +33,14 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 edit = [
 	{ run = "${EDITOR:-vi} %s", desc = "$EDITOR",      for = "unix", block = true },
 	{ run = 'neovide %s',       desc = "Neovide",      for = "unix", block = true },
+	{ run = "zeditor %s",       desc = "Zed",          for = "unix", orphan = true },
+	{ run = "zeditor -w %s",    desc = "Zed (block)",  for = "unix", block = true },
 	{ run = "code %s",          desc = "code",         for = "unix", orphan = true },
 	{ run = "code -w %s",       desc = "code (block)", for = "unix", block = true },
 	{ run = "nvim %s",          desc = "NeoVim",       for = "windows", block = true },
 	{ run = 'neovide %s',       desc = "Neovide",      for = "windows", block = true },
+	{ run = "zeditor %s",       desc = "Zed",          for = "windows", orphan = true },
+	{ run = "zeditor -w %s",    desc = "Zed (block)",  for = "windows", block = true },
 	{ run = "code %s",          desc = "code",         for = "windows", orphan = true },
 	{ run = "code -w %s",       desc = "code (block)", for = "windows", block = true },
 ]

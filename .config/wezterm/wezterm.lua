@@ -6,7 +6,7 @@ local config = wezterm.config_builder()
 config.color_scheme = 'Rosé Pine Moon (Gogh)'
 config.enable_wayland = false
 config.font = wezterm.font_with_fallback {
-    { family = 'Maple Mono NF CN', weight = 'Medium' },
+    { family = 'JetBrains Maple Mono', weight = 'Medium' },
     { family = 'Noto Sans CJK JP', weight = 'Medium' },
     { family = 'Noto Sans CJK SC', weight = 'Medium' },
     { family = 'Noto Sans CJK TC', weight = 'Medium' },

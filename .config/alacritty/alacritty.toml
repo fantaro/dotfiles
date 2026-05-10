@@ -3,6 +3,9 @@ import = [
     "~/.config/alacritty/themes/themes/rose_pine_moon.toml"
 ]
 
+[env]
+TERM = "xterm-256color"
+
 [window]
 decorations = "None"
 dimensions = { columns = 120, lines = 32 }
@@ -10,10 +13,10 @@ opacity = 0.9
 padding = { x = 5, y = 5 }
 
 [font]
-normal = { family = "Maple Mono NF CN", style = "Medium" }
-bold = { family = "Maple Mono NF CN", style = "Bold" }
-italic = { family = "Maple Mono NF CN", style = "Medium Italic" }
-bold_italic = { family = "Maple Mono NF CN", style = "Bold Italic" }
+normal = { family = "JetBrains Maple Mono", style = "Medium" }
+bold = { family = "JetBrains Maple Mono", style = "Bold" }
+italic = { family = "JetBrains Maple Mono", style = "Medium Italic" }
+bold_italic = { family = "JetBrains Maple Mono", style = "Bold Italic" }
 size = 13.0
 offset = { x = 0, y = 1 }
 
