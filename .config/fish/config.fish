@@ -28,6 +28,10 @@ function ls
     eza --color=always --group-directories-first --icons=always --time-style=long-iso $argv
 end
 
+function lto
+    eza -aT --color=never --group-directories-first --icons=never --time-style=long-iso --git-ignore $argv
+end
+
 function ll
     ls -l $argv
 end
