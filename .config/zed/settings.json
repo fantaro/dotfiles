@@ -30,6 +30,7 @@
     "metrics": false
   },
   "session": {
+    "restore_unsaved_buffers": false,
     "trust_all_worktrees": true
   },
   "icon_theme": "Zed (Default)",
