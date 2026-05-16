@@ -62,7 +62,7 @@ font-family = JetBrains Maple Mono
 font-size = 13
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 2
-shell-integration = zsh
+shell-integration = fish
 shell-integration-features = no-cursor
 theme = Rose Pine Moon
 unfocused-split-opacity = 0.8
@@ -79,4 +79,4 @@ working-directory = inherit
 # https://github.com/hackrmomo/ghostty-shaders
 # https://github.com/KroneCorylus/shader-playground
 # ==========================
-custom-shader = ./shaders/cursor_blaze.glsl
+# custom-shader = ./shaders/cursor_blaze.glsl
