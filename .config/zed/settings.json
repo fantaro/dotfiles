@@ -7,6 +7,14 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "proxy": "",
+  "active_pane_modifiers": {
+    "inactive_opacity": 0.6
+  },
+  "tabs": {
+    "file_icons": true
+  },
+  "use_smartcase_search": true,
   "buffer_line_height": "standard",
   "auto_update": false,
   "restore_on_startup": "empty_tab",
@@ -36,9 +44,5 @@
   "icon_theme": "Zed (Default)",
   "ui_font_size": 18.0,
   "buffer_font_size": 16.0,
-  "theme": {
-    "mode": "dark",
-    "light": "Gruvbox Light",
-    "dark": "Gruvbox Dark",
-  },
+  "theme": "Gruvbox Dark",
 }
