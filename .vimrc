@@ -12,7 +12,7 @@
 "   \__\::::/      \__\/      \  \:\
 "       ~~~~                   \__\/
 
-" Last Change : 2025-08-02
+" Last Change : 2026-07-09
 "  Maintainer : 樊 振剛（ハン シンゴウ）
 "        Mail : fantaro@gmail.com
 "      Github : https://github.com/fantaro
@@ -398,9 +398,9 @@ if has('gui_running')
 
   " フォントの設定
   " Windowsフォント
-  set guifont=Maple_Mono_NF_CN_Medium:h12:cDEFAULT
+  "set guifont=Maple_Mono_NF_CN_Medium:h12:cDEFAULT
   " Linuxフォント
-  "set guifont=Maple\ Mono\ NF\ CN\ Medium\ 12
+  set guifont=JetBrains\ Maple\ Mono\ Medium\ 12
 
   " ウインドウの幅
   set columns=150

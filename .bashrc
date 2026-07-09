@@ -21,15 +21,18 @@ export EDITOR=/usr/bin/nvim
 export SUDO_EDITOR=$EDITOR
 
 # User configuration
-pokemon-colorscripts -r | fastfetch -c $HOME/.config/fastfetch/config-pokemon.jsonc --logo-type file-raw --logo-height 10 --logo-width 5 --logo -
+# pokemon-colorscripts -r | fastfetch -c $HOME/.config/fastfetch/config-pokemon.jsonc --logo-type file-raw --logo-height 10 --logo-width 5 --logo -
 
-# alias for lsd
-alias ls=lsd
+# alias for eza
+alias ls='eza --color=always --group-directories-first --icons=always --time-style=long-iso'
 alias ll='ls -l'
 alias la='ls -a'
-alias lla='ls -la'
-alias lt='ls --tree'
-alias lta='ls -a --tree'
+alias lla='ls -al'
+alias lt='ls -T'
+alias lta='ls -aT'
+alias lt1='ls -T --level=1'
+alias lta1='ls -aT --level=1'
+alias l.="eza -a | grep -e '^\.'"
 
 # alias for bat
 alias cat='bat --paging=never --theme=Dracula'
