@@ -40,9 +40,16 @@ SAVEHIST=10000
 
 # ZSH basic options
 setopt APPEND_HISTORY
-setopt AUTO_CD
+setopt AUTOCD
 setopt CORRECT
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt NOBEEP
 setopt NO_NOMATCH
+setopt NUMERIC_GLOB_SORT  # sort file10 after file9, not after file1
+setopt SHARE_HISTORY
 
 # User configuration
 # pokemon-colorscripts -r | fastfetch -c $HOME/.config/fastfetch/config-pokemon.jsonc --logo-type file-raw --logo-height 10 --logo-width 5 --logo -
@@ -58,13 +65,10 @@ alias lta='ls -aT'
 alias lt1='ls -T --level=1'
 alias lta1='ls -aT --level=1'
 alias l.="eza -a | grep -e '^\.'"
+alias tree='eza -aT --color=never --group-directories-first --icons=never --time-style=long-iso --git-ignore'
 
 # alias for bat
 alias cat='bat --paging=never --theme=Dracula'
-
-# alias for git (Not in omz's git plugin)
-alias gac='git add . && git commit -m update'
-alias gdws='git diff --word-diff --staged'
 
 # alias for vim
 alias vi=vim
@@ -81,6 +85,26 @@ alias egrep='egrep --color=auto'
 
 # alias for fzf (preview by vim)
 alias vfind='vim $(fzf --preview="bat --color=always {}")'
+
+# alias for rg
+alias rg='rg --color=auto'
+
+# alias for df
+alias df='df -h'
+
+# alias for git
+alias ga='git add'
+alias gac='git add . && git commit -m update'
+alias gb='git branch'
+alias gcd='git checkout develop'
+alias gck='git checkout'
+alias gcm='git checkout master'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gdw='git diff --word-diff'
+alias gdws='git diff --word-diff --staged'
+alias gsh='git show'
+alias gst='git status'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

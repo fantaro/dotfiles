@@ -1,7 +1,8 @@
 # ---- Environment variables ----
+set -gx GPG_TTY (tty)
 set -gx EDITOR /usr/bin/nvim
 set -gx SUDO_EDITOR $EDITOR
-set -gx FZF_BASE /usr/bin/fzf
+set -gx VISUAL $EDITOR
 
 # ---- Lazy load (reduce startup time) ----
 # fastfetch
@@ -69,39 +70,6 @@ function cat
     bat --paging=never --theme=Dracula $argv
 end
 
-# git
-function gac
-    git add .; and git commit -m update
-end
-
-function gco
-    git checkout
-end
-
-function gd
-    git diff
-end
-
-function gds
-    git diff --staged
-end
-
-function gdw
-    git diff --word-diff
-end
-
-function gdws
-    git diff --word-diff --staged
-end
-
-function gst
-    git status
-end
-
-function gsts
-    git stash show --patch
-end
-
 # vim
 function vim
     command nvim $argv
@@ -137,6 +105,65 @@ end
 function vfind
     set file (fzf --preview="bat --color=always {}")
     and nvim $file
+end
+
+# rg
+function rg
+    rg --color=auto
+end
+
+# df
+function rg
+    df -h
+end
+
+# git
+function ga
+    git add
+end
+
+function gac
+    git add . && git commit -m update
+end
+
+function gb
+    git branch
+end
+
+function gcd
+    git checkout develop
+end
+
+function gck
+    git checkout
+end
+
+function gcm
+    git checkout master
+end
+
+function gd
+    git diff
+end
+
+function gds
+    git diff --staged
+end
+
+function gdw
+    git diff --word-diff
+end
+
+function gdws
+    git diff --word-diff --staged
+end
+
+function gsh
+    git show
+end
+
+function gst
+    git status
 end
 
 # ---- PATH optimization ----
