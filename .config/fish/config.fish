@@ -28,7 +28,7 @@ function ls
     eza --color=always --group-directories-first --icons=always --time-style=long-iso $argv
 end
 
-function lto
+function tree
     eza -aT --color=never --group-directories-first --icons=never --time-style=long-iso --git-ignore $argv
 end
 
