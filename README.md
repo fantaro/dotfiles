@@ -308,6 +308,15 @@
 │   │   │   ├── catppuccin.kdl
 │   │   │   └── rose-pine.kdl
 │   │   └── config.kdl
+│   ├── zsh
+│   │   ├── .zshenv
+│   │   ├── .zshrc
+│   │   ├── aliases.zsh
+│   │   ├── bindings.zsh
+│   │   ├── fzf.zsh
+│   │   ├── plugins.zsh
+│   │   ├── prompt.zsh
+│   │   └── README.md
 │   ├── brave-flags.conf
 │   ├── chromium-flags.conf
 │   ├── KDE_Keymaps.kksrc
