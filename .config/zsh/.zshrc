@@ -19,7 +19,10 @@
 # mkdir -p ~/.local/state/zsh # history
 # mkdir -p ~/.cache/zsh       # completion cache
 #
-# Plugins: fast-syntax-highlighting, zsh-autosuggestions, zsh-history-substring-search
+# Plugins: fast-syntax-highlighting,
+#          zsh-autosuggestions,
+#          zsh-history-substring-search,
+#          zsh-vi-mode(Disabled by default)
 # Update plugins: zplugin-update
 # Prompt: starship
 # Navigation: zoxide, fzf, fd
@@ -30,11 +33,11 @@
 #    Key : Action
 # Ctrl+R : Fuzzy history search (fzf)
 # Ctrl+T : Fuzzy file search including hidden files (fzf + fd)
-# Ctrl+F : Fuzzy file search excluding hidden files (fzf + fd)
-# Ctrl+→ : Move forward one word
-# Ctrl+← : Move backward one word
-# ↑ / ↓  : History search by prefix
-# Ctrl+\ : Toggle autosuggestions
+# Ctrl+F : Fuzzy file search excluding hidden files (fzf + fd) (zsh-vi-mode enabled only)
+# Ctrl+→ : Move forward one word (zsh-vi-mode enabled only)
+# Ctrl+← : Move backward one word (zsh-vi-mode enabled only)
+# ↑ / ↓  : History search by prefix (zsh-vi-mode enabled only)
+# Ctrl+\ : Toggle autosuggestions (zsh-vi-mode enabled only)
 
 # =========================================================
 # History

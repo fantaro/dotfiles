@@ -1,4 +1,5 @@
 # zsh
+# https://github.com/radleylewis/zsh
 
 Powerful but tastefully minimal zsh configuration.
 
