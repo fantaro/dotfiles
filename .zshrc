@@ -52,8 +52,9 @@ setopt NUMERIC_GLOB_SORT  # sort file10 after file9, not after file1
 setopt SHARE_HISTORY
 
 # User configuration
-# pokemon-colorscripts -r | fastfetch -c $HOME/.config/fastfetch/config-pokemon.jsonc --logo-type file-raw --logo-height 10 --logo-width 5 --logo -
-fastfetch -c $HOME/.config/fastfetch/config.jsonc --logo-type file-raw --logo-height 10 --logo-width 5
+if command -v fastfetch >/dev/null 2>&1; then
+  fastfetch -c $HOME/.config/fastfetch/config.jsonc --logo-type file-raw --logo-height 10 --logo-width 5
+fi
 
 # alias for eza
 alias ls='eza --color=always --group-directories-first --icons=always --time-style=long-iso'
