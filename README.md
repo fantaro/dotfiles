@@ -10,6 +10,10 @@
 │   │   └── alacritty.toml
 │   ├── btop
 │   │   └── btop.conf
+│   ├── cosmic
+│   │   └── com.system76.CosmicSettings.Shortcuts
+│   │       └── v1
+│   │           └── custom
 │   ├── environment.d
 │   │   └── fcitx.conf
 │   ├── eza

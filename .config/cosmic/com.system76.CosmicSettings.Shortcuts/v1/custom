@@ -1,0 +1,49 @@
+{
+    (
+        modifiers: [
+            Super,
+        ],
+    ): System(AppLibrary),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Return",
+    ): System(Terminal),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "a",
+    ): Disable,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "e",
+    ): System(HomeFolder),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "f",
+    ): Disable,
+    (
+        modifiers: [
+            Alt,
+        ],
+        key: "space",
+    ): System(Launcher),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "v",
+    ): Spawn("copyq menu"),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "slash",
+    ): Disable,
+}
