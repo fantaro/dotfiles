@@ -131,6 +131,10 @@ source "$ZDOTDIR/plugins.zsh"
 # Prompt/theme
 source "$ZDOTDIR/prompt.zsh"
 
+if command -v fastfetch >/dev/null 2>&1; then
+  fastfetch -c $HOME/.config/fastfetch/config.jsonc --logo-type file-raw --logo-height 10 --logo-width 5
+fi
+
 # =========================================================
 # Node / NVM
 # =========================================================
