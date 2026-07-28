@@ -12,7 +12,7 @@
 "   \__\::::/      \__\/      \  \:\
 "       ~~~~                   \__\/
 
-" Last Change : 2026-07-09
+" Last Change : 2026-07-28
 "  Maintainer : 樊 振剛（ハン シンゴウ）
 "        Mail : fantaro@gmail.com
 "      Github : https://github.com/fantaro
@@ -58,6 +58,12 @@ set ambiwidth=double
 " PlugUpgrade : Upgrade vim-plug itself
 " PlugStatus  : Check the status of plugins
 " PlugDiff    : Examine changes from the previous update and the pending changes
+"
+" vim-plug の初期設定
+" mkdir -p ~/.vim/autoload/
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" vim
+" :PlugInstall
 "---------------------------------------------------------------------------
 let $MyPlugDir = "~/.vim/plugged"
 if has('win32')
