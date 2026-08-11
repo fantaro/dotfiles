@@ -47,20 +47,20 @@ HISTFILE="$XDG_STATE_HOME/zsh/history"
 HISTSIZE=100000
 SAVEHIST=100000
 
-setopt APPEND_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE
+setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 
 # =========================================================
 # ZSH basic options
 # =========================================================
 
-setopt AUTOCD
+setopt AUTO_CD
 setopt CORRECT
-setopt NOBEEP
+setopt NO_BEEP
 setopt NO_NOMATCH
 setopt NUMERIC_GLOB_SORT  # sort file10 after file9, not after file1
 
@@ -85,36 +85,10 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # lowercase input matches upper and lower
 
 # =========================================================
-# Fuzzy finder
-# =========================================================
-
-# macOS / Homebrew (Apple Silicon)
-if [[ -f /opt/homebrew/opt/fzf/shell/key-bindings.zsh ]]; then
-  source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
-  source /opt/homebrew/opt/fzf/shell/completion.zsh
-fi
-
-# macOS / Homebrew (Intel)
-if [[ -f /usr/local/opt/fzf/shell/key-bindings.zsh ]]; then
-  source /usr/local/opt/fzf/shell/key-bindings.zsh
-  source /usr/local/opt/fzf/shell/completion.zsh
-fi
-
-# Arch
-if [[ -f /usr/share/fzf/key-bindings.zsh ]]; then
-  source /usr/share/fzf/key-bindings.zsh
-  source /usr/share/fzf/completion.zsh
-fi
-
-# Ubuntu
-if [[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]]; then
-  source /usr/share/doc/fzf/examples/key-bindings.zsh
-  source /usr/share/doc/fzf/examples/completion.zsh
-fi
-
-# =========================================================
 # Modular Config Files
 # =========================================================
+
+ZDOTDIR="${ZDOTDIR:-$HOME/.config/zsh}"
 
 # fzf configuration
 source "$ZDOTDIR/fzf.zsh"
@@ -131,14 +105,21 @@ source "$ZDOTDIR/plugins.zsh"
 # Prompt/theme
 source "$ZDOTDIR/prompt.zsh"
 
-if command -v fastfetch >/dev/null 2>&1; then
+if [[ -o login ]] && command -v fastfetch >/dev/null 2>&1; then
   fastfetch -c $HOME/.config/fastfetch/config.jsonc --logo-type file-raw --logo-height 10 --logo-width 5
 fi
 
 # =========================================================
-# Node / NVM
+# Node / NVM (lazy load)
 # =========================================================
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+_nvm_ensure() {
+  unset -f _nvm_ensure nvm node npm npx 2>/dev/null
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+}
+for _c in nvm node npm npx; do
+  eval "$_c() { _nvm_ensure; $_c \"\$@\"; }"
+done
+unset _c

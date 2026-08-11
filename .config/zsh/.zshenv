@@ -21,7 +21,7 @@ elif command -v batcat >/dev/null 2>&1; then
 fi
 
 # ---------- GPG ----------
-export GPG_TTY=$(tty)
+export GPG_TTY=$(tty 2>/dev/null)
 
 # ---------- Starship ----------
 export STARSHIP_CONFIG="$HOME/.config/starship.toml"

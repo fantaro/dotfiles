@@ -2,6 +2,9 @@
 # Keybindings
 # =========================================================
 
+# Ctrl+F -> fzf file picker (no hidden files)
+bindkey '^F' _fzf_file_no_hidden
+
 if [[ -d "${ZDOTDIR:-$HOME/.config/zsh}/plugins/zsh-vi-mode" ]]; then
 	# Cursor shape per vi mode
 	ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BEAM
