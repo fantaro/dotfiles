@@ -5,9 +5,13 @@
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
 source <(fzf --zsh)
 
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --strip-cwd-prefix'  # strip-cwd-prefix removes the leading ./ from results
+if command -v fd >/dev/null 2>&1; then
+  export FZF_DEFAULT_COMMAND='fd --type f --hidden --strip-cwd-prefix'  # strip-cwd-prefix removes the leading ./ from results
+elif command -v fdfind >/dev/null 2>&1; then
+  export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --strip-cwd-prefix'
+fi
 
-# Ctrl-T uses fd
+# Ctrl-T uses fd/fdfind
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # UI

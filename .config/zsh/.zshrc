@@ -25,15 +25,15 @@
 #          zsh-vi-mode(Disabled by default)
 # Update plugins: zplugin-update
 # Prompt: starship
-# Navigation: zoxide, fzf, fd
-# CLI tools: eza, bat, nvim, ripgrep
+# Navigation: zoxide, fzf, fd/fdfind
+# CLI tools: eza, bat/batcat, nvim, ripgrep
 # Node: nvm
 #
 # Keybindings:
 #    Key : Action
 # Ctrl+R : Fuzzy history search (fzf)
-# Ctrl+T : Fuzzy file search including hidden files (fzf + fd)
-# Ctrl+F : Fuzzy file search excluding hidden files (fzf + fd) (zsh-vi-mode enabled only)
+# Ctrl+T : Fuzzy file search including hidden files (fzf + fd/fdfind)
+# Ctrl+F : Fuzzy file search excluding hidden files (fzf + fd/fdfind) (zsh-vi-mode enabled only)
 # Ctrl+→ : Move forward one word (zsh-vi-mode enabled only)
 # Ctrl+← : Move backward one word (zsh-vi-mode enabled only)
 # ↑ / ↓  : History search by prefix (zsh-vi-mode enabled only)
