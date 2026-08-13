@@ -274,6 +274,10 @@
 │   │       └── plugins
 │   │           ├── fff.lua
 │   │           └── noice.lua
+│   ├── superfile
+│   │   ├── config.toml
+│   │   ├── hotkeys.toml
+│   │   └── hotkeys.toml.org
 │   ├── tmux
 │   │   └── tmux.conf
 │   ├── wezterm
@@ -305,7 +309,6 @@
 │   │   ├── theme.toml
 │   │   └── yazi.toml
 │   ├── zed
-│   │   ├── themes
 │   │   └── settings.json
 │   ├── zellij
 │   │   ├── themes
