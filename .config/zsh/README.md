@@ -11,7 +11,7 @@ Powerful but tastefully minimal zsh configuration.
 sudo pacman -S zsh neovim eza bat fd fzf zoxide starship ripgrep
 ```
 
-### Ubuntu
+### Debian/Ubuntu/Kali
 
 ```sh
 sudo apt install zsh neovim eza bat fd-find fzf ripgrep
@@ -34,7 +34,9 @@ brew install zsh neovim eza bat fd fzf zoxide starship ripgrep
 **1. Clone the repo**
 
 ```sh
-git clone https://github.com/radleylewis/zsh ~/.config/zsh
+cd ~/Documents
+git clone https://github.com/fantaro/dotfiles
+mv ~/Documents/dotfiles/.config/zsh ~/.config/
 ```
 
 **2. Point zsh at the config directory**

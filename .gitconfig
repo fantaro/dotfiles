@@ -1,0 +1,5 @@
+[user]
+	email = fantaro@gmail.com
+	name = fantaro
+[core]
+	autocrlf = false
