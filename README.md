@@ -330,6 +330,7 @@
 │   ├── microsoft-edge-stable-flags.conf
 │   └── starship.toml
 ├── .bashrc
+├── .gitconfig
 ├── .vimrc
 └── .zshrc
 ```
