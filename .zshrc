@@ -27,6 +27,7 @@ export FZF_BASE=/usr/bin/fzf
 
 export EDITOR=/usr/bin/nvim
 export SUDO_EDITOR=$EDITOR
+export VISUAL=$EDITOR
 
 source $ZSH/oh-my-zsh.sh
 
@@ -68,8 +69,12 @@ alias lta1='ls -aT --level=1'
 alias l.="eza -a | grep -e '^\.'"
 alias tree='eza -aT --color=never --group-directories-first --icons=never --time-style=long-iso --git-ignore'
 
-# alias for bat
-alias cat='bat --paging=never --theme=Dracula'
+# alias for bat/batcat
+if command -v bat >/dev/null 2>&1; then
+  alias cat='bat --paging=never --theme=Dracula'
+elif command -v batcat >/dev/null 2>&1; then
+  alias cat='batcat --paging=never --theme=Dracula'
+fi
 
 # alias for vim
 alias vi=vim
