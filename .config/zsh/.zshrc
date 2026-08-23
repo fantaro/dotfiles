@@ -27,7 +27,7 @@
 # Prompt: starship
 # Navigation: zoxide, fzf, fd
 # CLI tools: eza, bat, nvim, ripgrep
-# Node: nvm
+# Node: fnm (fallback: nvm)
 #
 # Keybindings:
 #    Key : Action
@@ -110,16 +110,28 @@ if [[ -z "$TMUX" ]] && [[ -z "$ZELLIJ" ]] && command -v fastfetch >/dev/null 2>&
 fi
 
 # =========================================================
-# Node / NVM (lazy load)
+# Node / FNM or NVM (lazy load, fnm takes priority)
 # =========================================================
 
-export NVM_DIR="$HOME/.nvm"
-_nvm_ensure() {
-  unset -f _nvm_ensure nvm node npm npx 2>/dev/null
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-  [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
-}
-for _c in nvm node npm npx; do
-  eval "$_c() { _nvm_ensure; $_c \"\$@\"; }"
-done
+if command -v fnm >/dev/null 2>&1; then
+  _fnm_ensure() {
+    unset -f _fnm_ensure fnm node npm npx corepack 2>/dev/null
+	eval "$(fnm env --use-on-cd --shell zsh)"
+    eval "$(fnm completions --shell zsh)"
+    [ "$(fnm current 2>/dev/null)" = "none" ] && fnm use default --install-if-missing >/dev/null 2>&1
+  }
+  for _c in fnm node npm npx corepack; do
+    eval "$_c() { _fnm_ensure; $_c \"\$@\"; }"
+  done
+else
+  export NVM_DIR="$HOME/.nvm"
+  _nvm_ensure() {
+    unset -f _nvm_ensure nvm node npm npx corepack 2>/dev/null
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+  }
+  for _c in nvm node npm npx corepack; do
+    eval "$_c() { _nvm_ensure; $_c \"\$@\"; }"
+  done
+fi
 unset _c
