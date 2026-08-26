@@ -276,8 +276,7 @@
 │   │           └── noice.lua
 │   ├── superfile
 │   │   ├── config.toml
-│   │   ├── hotkeys.toml
-│   │   └── hotkeys.toml.org
+│   │   └── hotkeys.toml
 │   ├── tmux
 │   │   └── tmux.conf
 │   ├── wezterm
@@ -307,6 +306,7 @@
 │   │   ├── keymap.toml
 │   │   ├── package.toml
 │   │   ├── theme.toml
+│   │   ├── vfs.toml
 │   │   └── yazi.toml
 │   ├── zed
 │   │   └── settings.json
@@ -332,5 +332,6 @@
 ├── .bashrc
 ├── .gitconfig
 ├── .vimrc
-└── .zshrc
+├── .zshrc
+└── README.md
 ```
