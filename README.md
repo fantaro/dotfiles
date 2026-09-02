@@ -22,6 +22,8 @@
 │   │   ├── config-compact.jsonc
 │   │   ├── config-pokemon.jsonc
 │   │   └── config.jsonc
+│   ├── firefox
+│   │   └── policies.json
 │   ├── fish
 │   │   └── config.fish
 │   ├── ghostty
@@ -264,6 +266,8 @@
 │   ├── lsd
 │   │   ├── config.yaml
 │   │   └── icons.yaml
+│   ├── mpv
+│   │   └── mpv.conf
 │   ├── neovide
 │   │   └── config.toml
 │   ├── nvim
