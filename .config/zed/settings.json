@@ -7,6 +7,14 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "on_last_window_closed": "quit_app",
+  "when_closing_with_no_tabs": "close_window",
+  "edit_predictions": {
+    "provider": "zed"
+  },
+  "terminal": {
+    "copy_on_select": true
+  },
   "proxy": "",
   "active_pane_modifiers": {
     "inactive_opacity": 0.6
@@ -17,7 +25,7 @@
   "use_smartcase_search": true,
   "buffer_line_height": "standard",
   "auto_update": false,
-  "restore_on_startup": "empty_tab",
+  "restore_on_startup": "launchpad",
   "agent": {
     "sidebar_side": "right",
     "favorite_models": [],
@@ -41,7 +49,7 @@
     "restore_unsaved_buffers": false,
     "trust_all_worktrees": true
   },
-  "icon_theme": "Zed (Default)",
+  "icon_theme": "Material Icon Theme",
   "ui_font_size": 18.0,
   "buffer_font_size": 16.0,
   "theme": "Gruvbox Dark",
