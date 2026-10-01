@@ -26,6 +26,8 @@
 │   │   └── policies.json
 │   ├── fish
 │   │   └── config.fish
+│   ├── foot
+│   │   └── foot.ini
 │   ├── ghostty
 │   │   ├── shaders
 │   │   │   ├── animated-gradient-shader.glsl
