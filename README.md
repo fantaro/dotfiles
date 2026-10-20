@@ -280,7 +280,6 @@
 │   │       └── plugins
 │   │           ├── catppuccin.lua.bak
 │   │           ├── everforest.lua.bak
-│   │           ├── example.lua
 │   │           ├── fff.lua
 │   │           ├── gruvbox.lua.bak
 │   │           ├── kanagawa.lua.bak
