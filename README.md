@@ -278,7 +278,12 @@
 │   │       │   ├── keymaps.lua
 │   │       │   └── options.lua
 │   │       └── plugins
+│   │           ├── catppuccin.lua.bak
+│   │           ├── everforest.lua.bak
+│   │           ├── example.lua
 │   │           ├── fff.lua
+│   │           ├── gruvbox.lua.bak
+│   │           ├── kanagawa.lua.bak
 │   │           └── noice.lua
 │   ├── superfile
 │   │   ├── config.toml
