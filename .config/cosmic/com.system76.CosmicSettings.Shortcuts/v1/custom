@@ -3,7 +3,14 @@
         modifiers: [
             Super,
         ],
-    ): System(AppLibrary),
+        key: "slash",
+    ): Disable,
+    (
+        modifiers: [
+            Alt,
+        ],
+        key: "space",
+    ): System(Launcher),
     (
         modifiers: [
             Super,
@@ -14,8 +21,9 @@
         modifiers: [
             Super,
         ],
-        key: "a",
-    ): Disable,
+        key: "v",
+        description: Some("copyq menu"),
+    ): Spawn("copyq menu"),
     (
         modifiers: [
             Super,
@@ -30,20 +38,13 @@
     ): Disable,
     (
         modifiers: [
-            Alt,
-        ],
-        key: "space",
-    ): System(Launcher),
-    (
-        modifiers: [
             Super,
         ],
-        key: "v",
-    ): Spawn("copyq menu"),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "slash",
+        key: "a",
     ): Disable,
+    (
+        modifiers: [
+            Super,
+        ],
+    ): System(AppLibrary),
 }
