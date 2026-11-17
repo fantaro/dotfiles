@@ -13,7 +13,8 @@
 │   ├── cosmic
 │   │   └── com.system76.CosmicSettings.Shortcuts
 │   │       └── v1
-│   │           └── custom
+│   │           ├── custom
+│   │           └── system_actions
 │   ├── environment.d
 │   │   └── fcitx.conf
 │   ├── eza

@@ -3,16 +3,15 @@
 # =========================================================
 
 # alias for eza
-alias ls='eza --color=always --group-directories-first --icons=always --time-style=long-iso'
-alias ll='ls -l'
-alias la='ls -a'
-alias lla='ls -al'
-alias lt='ls -T'
-alias lta='ls -aT'
-alias lt1='ls -T --level=1'
-alias lta1='ls -aT --level=1'
+alias ll='eza --color=always --group-directories-first --icons=always --time-style=long-iso -l'
+alias la='eza --color=always --group-directories-first --icons=always --time-style=long-iso -a'
+alias lla='eza --color=always --group-directories-first --icons=always --time-style=long-iso -al'
+alias lt='eza --color=always --group-directories-first --icons=always --time-style=long-iso -T'
+alias lta='eza --color=always --group-directories-first --icons=always --time-style=long-iso -aT'
+alias lt1='eza --color=always --group-directories-first --icons=always --time-style=long-iso -T --level=1'
+alias lta1='eza --color=always --group-directories-first --icons=always --time-style=long-iso -aT --level=1'
 alias l.="eza -a | grep -e '^\.'"
-alias tree='eza -aT --color=never --group-directories-first --icons=never --time-style=long-iso --git-ignore'
+alias tree='eza --color=never --group-directories-first --icons=never --time-style=long-iso --git-ignore -aT'
 
 # alias for bat/batcat
 if command -v bat >/dev/null 2>&1; then
