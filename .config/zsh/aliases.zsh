@@ -34,7 +34,11 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # alias for fzf (preview by vim)
-alias vfind='vim $(fzf --preview="bat --color=always {}")'
+if command -v bat >/dev/null 2>&1; then
+  alias vfind='vim $(fzf --preview="bat --color=always {}")'
+elif command -v batcat >/dev/null 2>&1; then
+  alias vfind='vim $(fzf --preview="batcat --color=always {}")'
+fi
 
 # alias for rg
 alias rg='rg --color=auto'
